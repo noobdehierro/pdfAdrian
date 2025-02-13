@@ -7,8 +7,15 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "elibyy/tcpdf-laravel": "^11.2",
         "laravel/framework": "^11.31",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "mikehaertl/php-pdftk": "^0.13.1",
+        "setasign/fpdf": "^1.8",
+        "setasign/fpdi": "^2.6",
+        "smalot/pdfparser": "^2.11",
+        "spatie/pdf-to-text": "^1.54",
+        "tecnickcom/tcpdf": "^6.8"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
