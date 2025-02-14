@@ -92,8 +92,14 @@ class ScanPdfController extends Controller
         }
 
         foreach ($datosFinales as $indice => $data) {
-            // Creamos una instancia de Pdf utilizando el molde (template) del PDF
-            $pdf = new PdftkPdf('pdf/molde/molde.pdf');
+
+            //si no hay un dato utilizar un pdf si si lo hay utilizar otro
+            if (empty($data['Referencia numérica'])) {
+                $pdf = new PdftkPdf('pdf/molde/molde.pdf');
+            }else{
+                $pdf = new PdftkPdf('pdf/molde/moldeTwo.pdf');
+            }
+
             $pdf->fillForm($data);
 
             // Generamos un nombre único para el PDF (puedes basarlo en un ID, nombre o un índice)
